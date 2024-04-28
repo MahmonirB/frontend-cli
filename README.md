@@ -1,2 +1,3 @@
 # Frontend-cli
-A COmmand Line to create a  frontend application
+
+A Command Line to create an ultimate frontend application, with up-to-dated dependencies and intial config
