@@ -18,7 +18,7 @@ cd "$PROJECT_DIR"||exit
 
 echo "====== step: installing dependencies ======"
 yarn add axios react-redux redux @reduxjs/toolkit react react-dom react-router-dom vite-tsconfig-paths
-yarn add --dev tailwindcss @types/node @vitejs/plugin-react-swc vite-plugin-svgr eslint eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh husky lint-staged prettier vite-plugin-checker
+yarn add --dev tailwindcss postcss autoprefixer @types/node @vitejs/plugin-react-swc vite-plugin-svgr eslint eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh husky lint-staged prettier vite-plugin-checker
 npx tailwindcss init
 
 echo "====== step: loading assets ======"
@@ -41,8 +41,6 @@ HYGEN_OVERWRITE=1 npx hygen@6.2.11 mygen new --package "${PROJECT_DIR}" --projec
 
 echo "====== Post installation ======="
 rm "$PROJECT_DIR/src/App.css"
-npx tailwindcss -i "$PROJECT_DIR/src/input.css" -o "$PROJECT_DIR/src/App.css"
-rm "$PROJECT_DIR/src/input.css"
 
 
 echo "====== finalizing: initializing git ======"
