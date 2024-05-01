@@ -4,7 +4,7 @@ after: "plugins"
 inject: true
 ---
   server: {
-    port: 6006,
+    port: 3000,
     host: true
   },
   build: {
