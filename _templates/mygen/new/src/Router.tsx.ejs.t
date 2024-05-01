@@ -2,9 +2,7 @@
 to: <%=package%>/src/Router.tsx
 ---
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import 'scss/app.scss';
 import Home from 'views/Home';
-import './App.css';
 import Navbar from './components/Navbar';
 import About from './views/About';
 import Profile from './views/Profile';
