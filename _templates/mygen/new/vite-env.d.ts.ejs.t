@@ -1,0 +1,5 @@
+---
+to: <%=package%>/vite-env.d.ts
+---
+/// <reference types="vite/client" />
+
