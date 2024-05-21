@@ -16,12 +16,12 @@ PROJECT_DIR="$BOOTSTRAP_DIR/../$PROJECT_NAME"
 
 cd "$PROJECT_DIR"||exit
 
-echo "====== step: installing dependencies ======"
+echo "====== step1: installing dependencies ======"
 yarn add axios react-redux redux @reduxjs/toolkit react react-dom react-router-dom vite-tsconfig-paths
 yarn add --dev tailwindcss postcss autoprefixer @types/node @vitejs/plugin-react-swc vite-plugin-svgr eslint eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh husky lint-staged prettier vite-plugin-checker
 npx tailwindcss init
 
-echo "====== step: loading assets ======"
+echo "====== step2: loading assets ======"
 cd "$BOOTSTRAP_DIR"||exit
 cp -r assets "$PROJECT_DIR/src"
 
@@ -35,7 +35,7 @@ else
 fi
 
 
-echo "====== step: generating code ======"
+echo "====== step3: generating code ======"
 HYGEN_OVERWRITE=1 npx hygen@6.2.11 mygen new --package "${PROJECT_DIR}" --projectName "${PROJECT_NAME}"
 
 
